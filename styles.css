@@ -5,7 +5,12 @@ http://developer.yahoo.net/yui/license.txt
 version: 2.2.2
 */
 /* for all templates and grids */
-body{text-align:center;}
+body{
+	text-align:center;
+	background-image: url("img/background.jpg");
+	background-position: center top;
+    background-size: 100% auto;
+}
 #ft{clear:both;}
 /**/
 /* 750 centered, and backward compatibility */ 
@@ -150,7 +155,7 @@ body{text-align:center;}
 	}
 	
 .content{
-	height:300px;
+	height:400px;
 	background:#CCC8B3;
 	border-top:#FFFFFF 2px solid;
 	margin:0;
@@ -158,7 +163,7 @@ body{text-align:center;}
 	}
 	
 #secondary{
-	height:300px;
+	height:400px;
 	background:#F6F0E0;
 	border-top:#FFFFFF 2px solid;
 	margin:0;
