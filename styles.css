@@ -1,19 +1,29 @@
 .item1 { grid-area: header; font-size: 30px; }
-.item2 { grid-area: left; }
-.item3 { grid-area: main; }
-.item4 { grid-area: right; }
+.item2 { 
+	grid-area: left; 
+	display: flex; 
+	align-items: center;
+	justify-content: center;}
+.item4 { grid-area: right; text-align: left;}
 .item5 { grid-area: footer; }
-.item6 { grid-area: sidebar; font-size: 28px; font-weight: 400; text-decoration: underline;}
+.item6 { grid-area: sidebar; 
+	font-size: 28px;
+	font-weight: 400;
+	display: flex; 
+	align-items: center;
+	justify-content: center;}
 
 body{
 	text-align:center;
-	background-image: url("img/background.jpg");
+	background-image: url("img/background.png");
 	background-position: center top;
     background-size: 100% auto;
 	font-family: "Montserrat Alternates", sans-serif;
 	font-weight: 400;
 	font-size: 20px; 
 	font-style: normal;
+	background-repeat: no-repeat; 
+	background-color: #3a6d4f;
 }
 
 .ring-photo > img {
@@ -32,7 +42,7 @@ body{
 }
 
 .map-photo {
-	max-width: 80%;
+	max-width: 88%;
 }
 
 .overlay {
@@ -41,7 +51,7 @@ body{
 	background: rgb(6, 53, 26);
 	background: rgba(19, 99, 46, 0.5);
 	color: #f1f1f1; 
-	width: 80%;
+	width: 88%;
 	transition: .5s ease;
 	opacity:0;
 	color: white;
@@ -51,7 +61,8 @@ body{
 	text-align: center;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1201px) {
+	.item3 { grid-area: main; }
 	.grid-container {
 		display: grid;
 		grid-template-areas:
@@ -67,7 +78,9 @@ body{
 	  }
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 1201px) {
+	
+	.item3 { grid-area: main; min-width: 500px;}
 	.grid-container {
 		display: grid;
 		grid-template-areas:
@@ -76,8 +89,6 @@ body{
 		  ' left left main main right right'
 		  ' footer footer footer footer footer footer';
 		gap: 10px;
-		background-color: #ebe3ee80;
-		padding: 10px;
 	  }
 }
 
@@ -87,15 +98,8 @@ body{
 
 .grid-container > div {
   background-color: rgb(242, 239, 247);
-  text-align: center;
-  padding: 20px 0;
+  padding: 20px;
 }
-
-.grid-container > div {
-	background-color: rgb(242, 239, 247);
-	text-align: center;
-	padding: 20px 0;
-  }
 
 .petit-formal script-regular {
 	font-family: "Petit Formal Script", cursive;
