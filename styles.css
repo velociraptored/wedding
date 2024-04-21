@@ -26,6 +26,18 @@ body{
 	background-color: #3a6d4f;
 }
 
+a:link {
+	color: rgb(5, 114, 116);
+	background-color: transparent;
+  }
+
+.flex-container {
+	display: flex;
+	flex-wrap: wrap;
+	height: 16px;
+	padding-right: 10px;
+  }
+  
 .ring-photo > img {
 	object-fit: cover;
 	width: 70%;
