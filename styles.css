@@ -1,8 +1,9 @@
-.item1 { grid-area: header; }
+.item1 { grid-area: header; font-size: 30px; }
 .item2 { grid-area: left; }
 .item3 { grid-area: main; }
 .item4 { grid-area: right; }
 .item5 { grid-area: footer; }
+.item6 { grid-area: sidebar; font-size: 28px; font-weight: 400; text-decoration: underline;}
 
 body{
 	text-align:center;
@@ -11,6 +12,7 @@ body{
     background-size: 100% auto;
 	font-family: "Montserrat Alternates", sans-serif;
 	font-weight: 400;
+	font-size: 20px; 
 	font-style: normal;
 }
 
@@ -21,37 +23,78 @@ body{
 	max-width: 350px;
   }
 
-  .map-photo > img {
+.map-photo-container {
+	position: relative;
 	object-fit: cover;
-	width: 70%;
-	max-height: 70%;
-	max-width: 600px;
-  }
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
 
+.map-photo {
+	max-width: 80%;
+}
 
-.grid-container {
-  display: grid;
-  grid-template-areas:
-    'header header header header header header'
-    ' footer footer main main right right '
-    ' left left main main right right';
-  gap: 10px;
-  background-color: #ebe3ee80;
-  padding: 10px;
+.overlay {
+	position: absolute; 
+	bottom: 0; 
+	background: rgb(6, 53, 26);
+	background: rgba(19, 99, 46, 0.5);
+	color: #f1f1f1; 
+	width: 80%;
+	transition: .5s ease;
+	opacity:0;
+	color: white;
+	font-size: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+	.grid-container {
+		display: grid;
+		grid-template-areas:
+		  'header header header'
+		  ' sidebar sidebar sidebar'
+		  ' main main main'
+		  'right right right'
+		  ' footer footer footer'
+		  'left left left';
+		gap: 10px;
+		background-color: #ebe3ee80;
+		padding: 10px;
+	  }
+}
+
+@media only screen and (min-width: 600px) {
+	.grid-container {
+		display: grid;
+		grid-template-areas:
+		  'header header header header header header'
+		  ' sidebar sidebar main main right right '
+		  ' left left main main right right'
+		  ' footer footer footer footer footer footer';
+		gap: 10px;
+		background-color: #ebe3ee80;
+		padding: 10px;
+	  }
+}
+
+.map-photo-container:hover .overlay {
+	opacity: 1;
 }
 
 .grid-container > div {
   background-color: rgb(242, 239, 247);
   text-align: center;
   padding: 20px 0;
-  font-size: 30px;
 }
 
 .grid-container > div {
 	background-color: rgb(242, 239, 247);
 	text-align: center;
 	padding: 20px 0;
-	font-size: 30px;
   }
 
 .petit-formal script-regular {
